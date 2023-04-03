@@ -11,7 +11,7 @@ export default function Sidebar() {
   return (
     <div className="sidebar-container">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLAY3C19kL0nV2bI_plU3_YFCtra0dpsYkg&usqp=CAU"
+        src="https://www.gstatic.com/webp/gallery/5.jpg"
         className="profile-img"
         alt="profile"
       />
