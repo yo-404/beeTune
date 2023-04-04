@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./sidebar.css";
 import SidebarButton from "./sidebarButton";
 import { MdFavorite } from "react-icons/md";
@@ -6,15 +6,20 @@ import { FaGripfire, FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
+import apiClient from "../../spotify";
 
 export default function Sidebar() {
+  const [image, setImage] = useState(
+    "https://img.freepik.com/premium-photo/abstract-wallpaper-liquid-lines-vibrant-colors-smooth-colorful-abstract-background_692702-6296.jpg?w=2000"
+  );
+  useEffect(() => {
+    apiClient.get("me").then((response) => {
+      setImage(response.data.images[0].url);
+    });
+  }, []);
   return (
     <div className="sidebar-container">
-      <img
-        src="https://www.gstatic.com/webp/gallery/5.jpg"
-        className="profile-img"
-        alt="profile"
-      />
+      <img src={image} className="profile-img" alt="profile" />
       <div>
         <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
         <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} />

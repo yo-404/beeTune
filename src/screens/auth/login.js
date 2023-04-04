@@ -1,13 +1,18 @@
-import React from 'react'
-import { loginEndpoint } from '../../spotify.js'
-import './login.css'
+import React from "react";
+import { loginEndpoint } from "../../spotify";
+import "./login.css";
 
 export default function Login() {
   return (
-    <div classname="login-page">
-      <img src = "https://static.vecteezy.com/system/resources/previews/001/200/758/original/music-note-png.png" alt="logo-beetune" className="logo"/>
+    <div className="login-page">
+      <img
+        src="https://cdn.dribbble.com/users/4128378/screenshots/14099181/media/1d235fb3d32a66bc5c96ad0b5e34cf33.png?compress=1&resize=400x300&vertical=top"
+        alt="logo-spotify"
+        className="logo"
+      />
       <a href={loginEndpoint}>
-        <div className="login-btn"> Login</div></a> 
+        <div className="login-btn">LOG IN</div>
+      </a>
     </div>
-  )
+  );
 }
