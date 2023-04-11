@@ -1,12 +1,12 @@
 .left-player-body{
     width: 68%;
     margin: 2%;
-    height: 100%;
+    height: 95%;
 }
 
-.left-player-body{
+.right-player-body{
     width: 30%;
-    height: 90%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

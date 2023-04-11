@@ -35,6 +35,7 @@
   height: 80%;
   width: 100%;
   overflow-y: auto;
+  
 }
 
 .queue-list::-webkit-scrollbar {

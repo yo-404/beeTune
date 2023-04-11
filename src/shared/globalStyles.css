@@ -23,5 +23,5 @@
   .flex{
     display: flex;
     color: white;
-    justify-content: right;
+    /* justify-content: right; */
   }
